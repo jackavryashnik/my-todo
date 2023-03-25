@@ -17,12 +17,12 @@
         <p class="main__description">You can create tasks, edit or delite if it done. Boost Your Productivity rigt now!</p>
 
         <div class="main__container container">
-            <button class="main__create-button">Create new</button>
+            <button class="main__create-button" id="create-button" onclick="displayForm()">Create new</button>
 
-            <form class="main__create-form">
+            <form class="main__create-form hiden" id="create-form">
                 <input type="text" class="main__title-input" placeholder="Title">
                 <input type="text" class="main__description-input" placeholder="Description">
-                <button class="main__submit-button">Create</button>
+                <button class="main__submit-button" >Create</button>
             </form>
         </div>
         <div class="main__tasks-container container"></div>
