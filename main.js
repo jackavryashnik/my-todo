@@ -4,7 +4,7 @@ function removeForm() {
 }
 
 function displayForm() {
-    document.getElementById("create-form").style.display = "block";
+    document.getElementById("create-form").style.display = "flex";
     document.getElementById("create-button").style.display = "none";
 }
 
@@ -34,4 +34,14 @@ function createTask() {
     task.appendChild(taskDescription);
     task.appendChild(taskDate);
     document.getElementById("tasks-container").appendChild(task);
+    
+    document.getElementById("title").value = "";
+    document.getElementById("description").value = "";
+}
+
+function cancelTask() {
+    document.getElementById("title").value = "";
+    document.getElementById("description").value = "";
+
+    removeForm();
 }

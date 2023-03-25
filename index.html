@@ -1,32 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task Manager</title>
-</head>
-<body>
-    <header class="header">
-        <h1 class="header__title">Task Manager</h1>
-        <p class="header__description">Streamline Your Tasks and Boost Your Productivity with Our Powerful Task Manager Application - Try Now!</p>
+  </head>
+  <body>
+    <header class="header container">
+      <h1 class="header__title">Task Manager</h1>
+      <p class="header__description">
+        Streamline Your Tasks and Boost Your Productivity with Our Powerful Task
+        Manager Application - Try Now!
+      </p>
     </header>
-    <main class="main">
-        <h2 class="main__title">Tasks</h2>
-        <p class="main__description">You can create tasks, edit or delite if it done. Boost Your Productivity rigt now!</p>
+    <main class="main container">
+      <h2 class="main__title">Tasks</h2>
+      <p class="main__description">
+        You can create tasks, edit or delite if it done. Boost Your Productivity
+        rigt now!
+      </p>
 
-        <div class="main__container container">
-            <button class="main__create-button" id="create-button" onclick="displayForm()">Create new</button>
+      <div class="main__container">
+        <button
+          class="main__create-button"
+          id="create-button"
+          onclick="displayForm()"
+        >
+          Create new
+        </button>
 
-            <form class="main__create-form hiden" id="create-form">
-                <input type="text" class="main__title-input" id="title" placeholder="Title">
-                <input type="text" class="main__description-input" id="description" placeholder="Description">
-                <button class="main__submit-button"  onclick="createTask()">Create</button>
-            </form>
-        </div>
-        <div class="main__tasks-container container" id="tasks-container"></div>
+        <form class="main__create-form" id="create-form">
+          <input
+            type="text"
+            class="main__title-input"
+            id="title"
+            placeholder="Title"
+          />
+          <input
+            type="text"
+            class="main__description-input"
+            id="description"
+            placeholder="Description"
+          />
+          <button class="main__submit-button" onclick="createTask()">
+            Create
+          </button>
+          <button class="main__cancele-button" onclick="cancelTask()">Cancel</button>
+        </form>
+      </div>
+      <div class="main__tasks-container container" id="tasks-container"></div>
     </main>
+    <footer class="footer"></footer>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
