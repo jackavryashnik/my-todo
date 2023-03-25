@@ -17,3 +17,21 @@ document.getElementById("create-form")
     document.getElementById("create-button").style.display = "block";
     });
 
+function createTask() {
+    const title = document.getElementById("title").value;
+    const description = document.getElementById("description").value;
+
+    const task = document.createElement("div");
+    const taskTitle = document.createElement("h3");
+    const taskDescription = document.createElement("p");
+    const taskDate = document.createElement("p");
+
+    taskTitle.innerText = title;
+    taskDescription.innerText = description;
+    taskDate.innerText = new Date().toLocaleString();
+
+    task.appendChild(taskTitle);
+    task.appendChild(taskDescription);
+    task.appendChild(taskDate);
+    document.getElementById("tasks-container").appendChild(task);
+}

@@ -20,12 +20,12 @@
             <button class="main__create-button" id="create-button" onclick="displayForm()">Create new</button>
 
             <form class="main__create-form hiden" id="create-form">
-                <input type="text" class="main__title-input" placeholder="Title">
-                <input type="text" class="main__description-input" placeholder="Description">
-                <button class="main__submit-button" >Create</button>
+                <input type="text" class="main__title-input" id="title" placeholder="Title">
+                <input type="text" class="main__description-input" id="description" placeholder="Description">
+                <button class="main__submit-button"  onclick="createTask()">Create</button>
             </form>
         </div>
-        <div class="main__tasks-container container"></div>
+        <div class="main__tasks-container container" id="tasks-container"></div>
     </main>
     <script src="main.js"></script>
 </body>
