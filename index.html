@@ -50,6 +50,22 @@
           </button>
           <button class="main__cancele-button" onclick="cancelTask()">Cancel</button>
         </form>
+        <form class="main__edit-form" id="edit-form">
+          <input
+            type="text"
+            class="main__title-input"
+            id="editTitle"
+          />
+          <input
+            type="text"
+            class="main__description-input"
+            id="editDescription"
+          />
+          <button class="main__submit-button" onclick="taskEdit()">
+            Edit
+          </button>
+          <button class="main__cancele-button" onclick="cancelTaskEdit()">Cancel</button>
+        </form>
       </div>
       <div class="main__tasks-container container" id="tasks-container"></div>
     </main>

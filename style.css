@@ -96,6 +96,10 @@ button {
     margin: auto;
 }
 
+.main__container {
+    margin-top: -15vh;
+}
+
 h2 {
     font-size: var(--h2-font-size);
     color: var(--first-color);
@@ -117,7 +121,7 @@ button{
     margin: .5rem;
     border-radius: .5rem;
     font-weight: var(--font-medium);
-    transition: .4s;
+    /* transition: .4s; */
 }
 
 button:hover{
@@ -126,12 +130,21 @@ button:hover{
 }
 
 .main__create-button {
+    display: flex;
     margin: 1.5rem auto;
+    position: relative;
+    top: 13vh;
+    z-index: 1;
 }
 
 .main__create-form {
-    display: none;
+    display: flex;
     flex-wrap: wrap;
+    visibility: hidden;
+}
+
+.main__edit-form {
+    display: none;
 }
 
 .main__title-input {
@@ -179,11 +192,27 @@ button {
 }
 
 .main__tasks-container p:last-child {
+    padding-right: 160px;
     margin-left: auto;
 }
 
 .main__tasks-container div:last-child {
     margin-bottom: 0;
+}
+
+.main__tasks-container div div {
+    flex-direction: row;
+    justify-content: flex-end;
+    float: right;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.main__tasks-container button {
+    width: 80px;
+    flex: 0;
+    margin: 5px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -202,7 +231,11 @@ button {
     }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
+    .main__create-button {
+        top: 25vh;
+    }
+
     .main__create-form {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
