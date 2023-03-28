@@ -9,12 +9,12 @@ function displayForm() {
 }
 
 function removeEditForm() {
-    document.getElementById("edit-form").style.display = "none";
+    document.getElementById("edit-form").style.visibility = "hidden";
     document.getElementById("create-button").style.visibility = "visible";
 }
 
 function displayEditForm() {
-    document.getElementById("create-form").style.display = "flex";
+    document.getElementById("create-form").style.visibility = "visible";
     document.getElementById("create-button").style.visibility = "hidden";
 }
 
@@ -23,6 +23,14 @@ document.getElementById("create-form")
     event.preventDefault();
 
     document.getElementById("create-form").style.visibility = "hidden";
+    document.getElementById("create-button").style.visibility = "visible";
+    });
+    
+document.getElementById("edit-form")
+    .addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    document.getElementById("edit-form").style.visibility = "hidden";
     document.getElementById("create-button").style.visibility = "visible";
     });
 
@@ -59,9 +67,9 @@ function createTask() {
 
         document.getElementById("editTitle").value = taskTitle;
         document.getElementById("editDescription").value = taskDescription;
-    
+        
         document.getElementById("edit-form").style.display = "block";
-        document.getElementById("task-form").style.display = "none";
+        document.getElementById("create-button").style.visibility = "hidden";
     });
     
     deleteButton.addEventListener("click", function () {
